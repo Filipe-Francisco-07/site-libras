@@ -15,11 +15,11 @@
 </header>
 
 <nav>
-    <a href="index.php">Início</a>
-    <a href="sobre.php">LIBRAS e Inclusão</a>
-    <a href="artigo.php">Artigo Base</a>
-    <a href="computacao.php">Computação</a>
-    <a href="glossario.php">Glossário</a>
+    <a href="index.html">Início</a>
+    <a href="sobre.html">LIBRAS e Inclusão</a>
+    <a href="artigo.html">Artigo Base</a>
+    <a href="computacao.html">Computação</a>
+    <a href="glossario.html">Glossário</a>
 </nav>
 
 <main>
