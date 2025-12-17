@@ -11,7 +11,7 @@ if ($texto === '') {
     exit;
 }
 
-$apiKey = getenv('OPENAI_API_KEY'); 
+$apiKey = getenv('OPENAI_API_KEY');
 
 $prompt = <<<PROMPT
 Reescreva o texto abaixo em português simples.
