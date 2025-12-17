@@ -1,82 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 body {
-    background-color: #0f172a;
+    background: radial-gradient(circle at top, #0b1d2d, #020617 70%);
     color: #e5e7eb;
     line-height: 1.6;
 }
 
-header {
-    padding: 2rem;
-    background-color: #020617;
+/* Header */
+.top {
     text-align: center;
+    padding: 3rem 1rem 2rem;
 }
 
-header h1 {
-    font-size: 2.2rem;
-    margin-bottom: 0.5rem;
+.top h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #e0f2fe;
 }
 
-nav {
+.top p {
+    margin-top: 0.6rem;
+    color: #7dd3fc;
+    font-size: 1rem;
+}
+
+/* Menu */
+.menu {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 2rem;
     padding: 1rem;
-    background-color: #020617;
+    background: rgba(2, 6, 23, 0.6);
+    backdrop-filter: blur(6px);
 }
 
-nav a {
+.menu a {
     color: #38bdf8;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
+    position: relative;
 }
 
-nav a:hover {
-    text-decoration: underline;
+.menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #38bdf8;
+    transition: width 0.3s;
 }
 
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* Layout principal */
 main {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 1.5rem;
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
 }
 
+/* Seções */
 section {
+    background: rgba(15, 23, 42, 0.85);
+    border-radius: 16px;
+    padding: 2rem;
     margin-bottom: 2rem;
+    box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.08),
+                0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-h2 {
-    color: #38bdf8;
+section h2 {
+    color: #7dd3fc;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+section p {
+    color: #e5e7eb;
     margin-bottom: 0.8rem;
 }
 
+/* Inputs */
+textarea {
+    width: 100%;
+    background: #020617;
+    border: 1px solid #1e293b;
+    color: #e5e7eb;
+    padding: 0.8rem;
+    border-radius: 10px;
+    resize: vertical;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #38bdf8;
+}
+
+/* Botão */
+button {
+    margin-top: 1rem;
+    padding: 0.7rem 1.4rem;
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    border: none;
+    border-radius: 10px;
+    color: #020617;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Resultado */
+.resultado p {
+    background: rgba(2, 6, 23, 0.7);
+    padding: 0.6rem 0.8rem;
+    border-left: 3px solid #38bdf8;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
 footer {
     text-align: center;
-    padding: 1rem;
-    background-color: #020617;
+    padding: 2rem;
+    color: #94a3b8;
     font-size: 0.9rem;
-}
-
-.exemplo {
-    background-color: #020617;
-    padding: 1.5rem;
-    border-radius: 8px;
-    margin-bottom: 2rem;
-}
-
-.exemplo h3 {
-    margin-top: 1rem;
-    color: #a5f3fc;
-}
-
-.resultado p {
-    background-color: #0f172a;
-    padding: 0.6rem;
-    border-left: 4px solid #38bdf8;
-    margin-bottom: 0.4rem;
 }

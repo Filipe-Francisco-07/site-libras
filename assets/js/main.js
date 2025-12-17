@@ -10,13 +10,14 @@ async function processarTexto() {
     resultado.innerHTML = '<p>Processando...</p>';
 
     try {
-        const response = await fetch('https://SEU_SITE.000webhostapp.com/processar_texto.php', {
+        const response = await fetch('/processar_texto.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({ texto })
         });
+
 
         const data = await response.json();
 
